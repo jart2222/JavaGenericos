@@ -35,6 +35,10 @@ public class EjemplosGenericos {
         inprimirClientes(clientesLista);
         inprimirClientes(clientePremiumList);
 
+        System.out.println("Maximo de 1,9 y 4 es: "+maximo(1,9,4));
+        System.out.println("Maximo de 3.9,11.6,7.78 es: "+maximo(3.9,11.6,7.78));
+        System.out.println("Maximo de zanahoria, arandanos, manzana es: "+maximo("zanahoria","arandano","manzana"));
+
     }
 
     public static <T> List<T> fromArrayToList(T[] c){
@@ -60,5 +64,16 @@ public class EjemplosGenericos {
         clientes.forEach(System.out::println);
     }
 
+    public static <T extends Comparable<T>> T maximo(T a, T b,T c){
+        T max=a;
+        if (b.compareTo(max)>0){
+            max=b;
+        }
+        if(c.compareTo(max)>0){
+            max=c;
+        }
+
+        return max;
+    }
 
 }
