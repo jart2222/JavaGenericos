@@ -1,8 +1,6 @@
 package org.aguzman.generics;
-
 import org.aguzman.poointerfaces.modelo.Cliente;
-
-import java.sql.Array;
+import org.aguzman.poointerfaces.modelo.ClientePremium;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

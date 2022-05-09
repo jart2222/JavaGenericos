@@ -1,14 +1,14 @@
 package org.aguzman.poointerfaces;
-
 import org.aguzman.poointerfaces.modelo.Cliente;
 import org.aguzman.poointerfaces.repositorio.*;
+import org.aguzman.poointerfaces.repositorio.lista.ClienteListRepositorio;
 
 import java.util.List;
 
 public class EjemploRepositorio {
     public static void main(String[] args) {
 
-        OrdenablePaginableCrudRepositorio repo = new ClienteListRepositorio();
+        OrdenablePaginableCrudRepositorio<Cliente> repo = new ClienteListRepositorio();
         repo.crear(new Cliente("Jano", "Perez"));
         repo.crear(new Cliente("Bea", "González"));
         repo.crear(new Cliente("Luci", "Martínez"));
